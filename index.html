@@ -141,7 +141,7 @@
 
         <nav class="menu">
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" title="Página Inicial">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
@@ -149,31 +149,25 @@
       </div>
     </footer>
 
-    <script src="jquery.min.js"></script>
+    <script src="jquery.min.js">
+      // Verificando se possui um atributo ->
+      // // $('.header-border li[href]').text('Link')
 
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $("#toggle_cars").click(function () {
-          let hiddenCars = $(".cars_list li:hidden").length;
-          let method = hiddenCars > 0 ? "show" : "hide";
+      // Verificando se possui mais de um atributo ->
+      // $('.header-border li [href][title]').text('Link')
 
-          eval(`$('.cars_list li').${method}()`);
-        });
+      // Verificando um valor para o atributo ->
+      // $('.header-border li [href="about.html"]').text()
 
-        $.expr[":"].carsCentury21 = function (el) {
-          return $(el).data("ano") > 2000;
-        };
+      // Verificando os atributos que COMEÇAM com uma letra específica
+      // $('.header-border li [href^="a"]').text()
 
-        $.expr[":"].carsBeforeYear = $.expr.createPseudo(function (year) {
-          return function (el) {
-            return $(el).data("ano") < year;
-          };
-        });
+      // Verificando os atributos que TERMINAM a expressão informada ->
+      // $('.header-border li [href$="html"]').text()
 
-        // Criando nosso próprio filtro
-        // $('.cars_list li:carsCentury21').css('font-size', '30px')
-      });
+      // Verificando os atributos que CONTÉM a expressão informada ->
+      // $('.header-border li [href*="in"]').text()
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript"></script>
   </body>
 </html>

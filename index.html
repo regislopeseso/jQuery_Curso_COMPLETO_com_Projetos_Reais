@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Download via CDN</title>
+    <title>Primeiros Passos</title>
     <script src="jquery.min.js"></script>
   </head>
   <body>
+    <h1>Esse é meu primeiro código jQuery</h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <script>
-      $("body").append(
-        "<h1>Hello jQuery was downloaded directly as a compressed file!</h1>"
-      );
+      jQuery(document).ready(function () {
+        alert("Minha página carregou com jQuery");
+      });
     </script>
   </body>
 </html>

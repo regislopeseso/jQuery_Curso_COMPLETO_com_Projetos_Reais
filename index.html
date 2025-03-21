@@ -115,8 +115,8 @@
             <li data-ano="1983">Uno <span> - Fiat</span></li>
             <li data-ano="1996">Palio</li>
             <li data-ano="2013">Ônix <span> - GM</span></li>
-            <li></li>
-            <li></li>
+            <li data-ano="2015">Corolla <span> - Toyota</span></li>
+            <li data-ano="2024">Gol <span> - VW</span></li>
           </ul>
         </div>
 
@@ -152,29 +152,29 @@
     <script src="jquery.min.js"></script>
 
     <script type="text/javascript">
-      // Selecionando o primeiro elemento de uma lista
-      // $(".cars_list li:first").click(function () {
-      //        alert("ok");
-      //      });
+      // Seleciona o primeiro item olhando para todas as listas que possuem a classe informada
+      // $(".cars_list li:first").css("text-decoration", "underline");
 
-      // Selecionando o último elemento de uma lista
-      // $(".cars_list li:last").click(function () {
-      //   alert("ok");
-      // });
+      // Seleciona o primeiro item de CADA lista que possua a classe informada
+      // $(".cars_list li:first-child").css("text-decoration", "underline");
 
-      // Selecionando o enésimo elemento de uma lista
-      // $(".cars_list li:eq(2 ou 3 ou 4 ... enésimo)").click(function () {
-      //   alert("ok");
-      // });
+      // Seleciona o último item olhando para todas as listas que possuem a classe informada
+      // $(".cars_list li:last").css("text-decoration", "underline");
 
-      // Selecionando os itens pares elemento de uma lista (as listas começam com 0)
-      // $(".cars_list li:even").css('background-color','#ccc')
+      // Seleciona o último item de CADA lista que possua a classe informada
+      // $(".cars_list li:last-child").css("text-decoration", "underline");
 
-      // Selecionando os itens ímpares elemento de uma lista
-      // $(".cars_list li:odd").css('background-color','#ccc')
+      // Seleciona os itens pares de uma lista, nesse caso a contagem começa com 1
+      // $(".cars_list li:nth-child(even)").css("background-color", "#ccc");
 
-      // Selecionando os itens de uma lista a partir de um index informado
-      // $('.cars_list li:gt(1)').css('opacity', '0.3')
+      // Seleciona os itens ímpares de uma lista, nesse caso a contagem começa com 1
+      // $(".cars_list li:nth-child(odd)").css("background-color", "#ccc");
+
+      // Seleciona os itens CADA lista (que tenham a classe informada) que possuem o index informado, nesse caso a contagem começa com 1
+      // $(".cars_list li:nth-child(2 ou 3 ou 56 ou ..)").css("background-color", "#ccc");
+
+      // Seleciona os itens de CADA lista (que tenham a classe informada) cujo o index seja a contagem que começa com o útimo item até o valor informado
+      // $(".cars_list li:nth-last-child(3").css("font-weight", "bold");
     </script>
   </body>
 </html>

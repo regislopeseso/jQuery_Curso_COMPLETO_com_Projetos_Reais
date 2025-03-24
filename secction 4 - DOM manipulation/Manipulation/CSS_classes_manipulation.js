@@ -16,3 +16,12 @@
 
 // Verificando se um elemento possui uma classe:
 // $('header .menu ul li:last a').hasClass('stylized_menu')
+
+// Ex.:
+// $("p").each(function () {
+//   if ($(this).hasClass("paragrafo")) {
+//     $(this).append(
+//       `<span style="color: red;"> - Eu tenho a classe</span>`
+//     );
+//   }
+// });

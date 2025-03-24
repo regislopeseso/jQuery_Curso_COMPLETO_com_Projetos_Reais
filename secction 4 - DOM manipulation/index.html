@@ -75,7 +75,7 @@
     <section class="home">
       <main class="container">
         <div class="title">
-          <h1>Home Page</h1>
+          <h1 title="main-title">Home Page</h1>
         </div>
 
         <p class="paragrafo">
@@ -131,6 +131,10 @@
           </ul>
         </div>
         <button type="button" id="toggle_cars">Exibir/Ocultar os carros</button>
+
+        <div>
+          <img src="assets/images/logo-hcode.svg" alt="Logo da Hcode" />
+        </div>
       </main>
     </section>
 
@@ -151,21 +155,12 @@
     <script src="jquery.min.js"></script>
 
     <script type="text/javascript">
-      // $(document).ready(function () {
-      //   $("#toggle_cars").click(function () {
-      //     let hiddenCars = $(".cars_list li:hidden").length;
-      //     let method = hiddenCars > 0 ? "show" : "hide";
-
-      //     eval(`$('.cars_list li').${method}()`);
-      //   });
-      // });
-
-      $("p").each(function () {
-        if ($(this).hasClass("paragrafo")) {
-          $(this).append(
-            `<span style="color: red;"> - Eu tenho a classe</span>`
-          );
-        }
+      $(document).ready(function () {
+        // Retornando ou definindo um atributo
+        // ex.1: $('img').attr('src')
+        // ex.2: $('img').attr('src','assets/images/jquery.jpg')
+        // Removendo um atributo
+        // ex.1: $('img').attr('src','assets/images/jquery.jpg')
       });
     </script>
   </body>

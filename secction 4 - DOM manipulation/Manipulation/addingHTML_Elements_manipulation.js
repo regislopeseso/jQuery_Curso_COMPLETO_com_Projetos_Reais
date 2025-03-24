@@ -32,3 +32,21 @@
 
 // Adicionando um elemento em volta de outros (modifica o conteúdo)
 // $(".cars_list li").wrapInner("<u></u>");
+
+// Removendo os elementos que envolvem (não pode passar nenhum parâmetro na função unwrap())
+// $('.cars_list li').unwrap()
+
+// Removendo elementos (remove o elemento <li>)
+// $('.cars_list li:eq(2)').remove()
+
+// Removendo elementos (atribui vazio ao elemento <li>)
+// $('.cars_list li:eq(2)').empty()
+
+// Removendo um elemento, mas mantendo seus eventos associados
+// $(".paragrafo").click(function () {
+//   $(this).html("Você clicou em mim!");
+// });
+
+// let txt = $(".paragrafo").detach();
+
+// $("section main p").before(txt);

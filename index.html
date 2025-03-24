@@ -150,6 +150,30 @@
 
     <script src="jquery.min.js"></script>
 
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+      $("#toggle_cars").click(function () {
+        let hiddenCars = $(".cars_list li:hidden").length;
+
+        let method = hiddenCars > 0 ? "show" : "hide";
+
+        eval(`$('.cars_list li').${method}()`);
+      });
+
+      $("[type=radio]").change(function () {
+        let value = $("input:checked").val();
+        let gender = value == "M" ? "Masculino" : "Feminino";
+
+        alert(`Você selecionou o sexo: ${gender}`);
+      });
+
+      $("input").focus(function () {
+        $("input:focus").val("Olá você clicou aqui!");
+      });
+
+      $("#register :submit").click(function (event) {
+        event.preventDefault();
+        alert("Data successfully submitted");
+      });
+    </script>
   </body>
 </html>

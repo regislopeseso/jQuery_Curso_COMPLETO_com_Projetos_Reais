@@ -112,10 +112,8 @@
         <div class="cars">
           <h3>Carros</h3>
           <ul class="cars_list">
-            <li data-ano="1983" style="display: none">
-              Uno <span> - Fiat</span>
-            </li>
-            <li data-ano="1996" style="display: none">Palio</li>
+            <li data-ano="1983">Uno <span> - Fiat</span></li>
+            <li data-ano="1996">Palio</li>
             <li data-ano="2013">Ônix <span> - GM</span></li>
             <li data-ano="2015">Corolla <span> - Toyota</span></li>
             <li data-ano="2024">Gol <span> - VW</span></li>
@@ -132,9 +130,7 @@
             <li data-ano="2003">Fusca</li>
           </ul>
         </div>
-
-        <button type="button" id="show_cars">Mostrar carros ocultos</button>
-        <button type="button" id="hide_cars">Ocultar carros</button>
+        <button type="button" id="toggle_cars">Exibir/Ocultar os carros</button>
       </main>
     </section>
 
@@ -154,14 +150,6 @@
 
     <script src="jquery.min.js"></script>
 
-    <script type="text/javascript">
-      $("#show_cars").click(function () {
-        $(".cars_list li:hidden").css("text-decoration", "underline").show();
-      });
-
-      $("#hide_cars").click(function () {
-        $(".cars_list li:visible").hide();
-      });
-    </script>
+    <script type="text/javascript"></script>
   </body>
 </html>

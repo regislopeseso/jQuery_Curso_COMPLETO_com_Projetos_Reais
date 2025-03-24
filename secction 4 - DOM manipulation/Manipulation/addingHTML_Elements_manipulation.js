@@ -12,3 +12,23 @@
 
 // Adicionando um elemento no INÍCIO de outro por meio de uma sintaxe difente
 // $('<li><a href="#">News 2</a></li>').prependTo(".menu ul");
+
+// Adicionando um elemento após outro:
+// $(".menu ul").after('<li><a href="#">News</a></li>');
+// $(".paragrafo").after("<h2>Hcode Treinamentos</h2>");
+
+// Adicionando um elemento após outro, sintaxe alternativa:
+// $('<h2>Hcode Treinamentos 2</h2>').insertAfter('.paragrafo');
+
+// Adicionando um elemento antes de outro:
+// $(".paragrafo").before("<h2>Hcode Treinamentos 3</h2>");
+
+// Adicionando um elemento antes de outro, sintaxe alternativa:
+// $("<h2>Hcode Treinamentos 3</h2>").insertBefore(".paragrafo");
+
+// Adicionando um elemento em volta de outros (modifica li)
+// $(".cars_list li").wrap("<i></i>");
+// $(".cars_list li").wrap("<b></b>");
+
+// Adicionando um elemento em volta de outros (modifica o conteúdo)
+// $(".cars_list li").wrapInner("<u></u>");

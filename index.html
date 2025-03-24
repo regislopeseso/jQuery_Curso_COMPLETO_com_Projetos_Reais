@@ -134,9 +134,7 @@
         </div>
 
         <button type="button" id="show_cars">Mostrar carros ocultos</button>
-        <button type="button" id="show_cars">Mostrar carros ocultos</button>
-
-        <button type="button" id="toggle_cars">Exibir/Ocultar os carros</button>
+        <button type="button" id="hide_cars">Ocultar carros</button>
       </main>
     </section>
 
@@ -161,7 +159,7 @@
         $(".cars_list li:hidden").css("text-decoration", "underline").show();
       });
 
-      $("#toggle_cars").click(function () {
+      $("#hide_cars").click(function () {
         $(".cars_list li:visible").hide();
       });
     </script>

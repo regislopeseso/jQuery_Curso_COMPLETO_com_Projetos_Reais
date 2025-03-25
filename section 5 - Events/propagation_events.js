@@ -51,3 +51,19 @@
 //     $(this).css("background", "red");
 //   });
 // });
+
+//! Removing an event from an element
+// $(document).ready(function () {
+//   let entries = 100;
+//   $(".register").append(`<u> - Ainda restam ${100 - entries} vagas</u>`);
+
+//   $("#form_login [type=submit]").on("submit", function (e) {
+//     e.preventDefault();
+//     alert("Você foi cadastrado com sucesso!");
+//   });
+
+//   if (entries >= 100) {
+//     $("#form_login [type=submit]").off("click");
+//     alert("não há mais vagas");
+//   }
+// });

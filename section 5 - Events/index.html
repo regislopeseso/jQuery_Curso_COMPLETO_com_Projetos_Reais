@@ -55,6 +55,18 @@
                   <td>Dom Casmurro</td>
                   <td>Machado de Assis</td>
                 </tr>
+                <tr>
+                  <td>Dom Casmurro</td>
+                  <td>Machado de Assis</td>
+                </tr>
+                <tr>
+                  <td>Dom Casmurro</td>
+                  <td>Machado de Assis</td>
+                </tr>
+                <tr>
+                  <td>Dom Casmurro</td>
+                  <td>Machado de Assis</td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -199,18 +211,15 @@
 
     <script>
       $(document).ready(function () {
-        let entries = 100;
-        $(".register").append(`<u> - Ainda restam ${100 - entries} vagas</u>`);
+        $(".books").append("<u> - Marque seus favoritos (irreversível)</u>");
 
-        $("#form_login [type=submit]").on("submit", function (e) {
-          e.preventDefault();
-          alert("Você foi cadastrado com sucesso!");
+        $("#books_list tbody tr").one("click", function () {
+          if (!$(this).hasClass("trselected")) {
+            $(this).addClass("trselected");
+          } else {
+            $(this).removeClass("trselected");
+          }
         });
-
-        if (entries >= 100) {
-          $("#form_login [type=submit]").off("click");
-          alert("não há mais vagas");
-        }
       });
     </script>
   </body>

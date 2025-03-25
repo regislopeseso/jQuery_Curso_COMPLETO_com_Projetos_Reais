@@ -67,3 +67,16 @@
 //     alert("não há mais vagas");
 //   }
 // });
+
+//! Limiting a specific event to trigger only once: .one()
+// $(document).ready(function () {
+//   $(".books").append("<u> - Marque seus favoritos (irreversível)</u>");
+
+//   $("#books_list tbody tr").one("click", function () {
+//     if (!$(this).hasClass("trselected")) {
+//       $(this).addClass("trselected");
+//     } else {
+//       $(this).removeClass("trselected");
+//     }
+//   });
+// });

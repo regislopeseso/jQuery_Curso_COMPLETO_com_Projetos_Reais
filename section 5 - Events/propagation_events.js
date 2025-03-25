@@ -37,3 +37,17 @@
 //     $("#books_list tbody").append(tr);
 //   });
 // });
+
+//! Stopping the propagation in situations where a certain event
+//! affecting outer structures
+//! should not affect inner structures: .event.stopPropagation()
+// $(document).ready(function () {
+//   $("#form_login").on("change", "[name]", function () {
+//     alert(`Elemento mudou. Seu valor: ${$(this).val()}`);
+//   });
+
+//   $("#form_login [name=bio]").on("change", function (event) {
+//     event.stopPropagation();
+//     $(this).css("background", "red");
+//   });
+// });

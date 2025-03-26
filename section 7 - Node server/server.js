@@ -27,6 +27,19 @@ app.post("/books", (req, res) => {
   );
 });
 
+app.delete("/books/:id", (req, res) => {
+  db.remove(
+    {
+      _id: req.params.id,
+    },
+    (err) => {
+      res.json({
+        success: true,
+      });
+    }
+  );
+});
+
 app.listen(3000, () => {
   console.log("Servidor executando com sucesso na porta 3000.");
 });

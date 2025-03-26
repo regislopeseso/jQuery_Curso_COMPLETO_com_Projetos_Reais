@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const nedb = require("nedb");
 const bodyParser = require("body-parser");
 const db = new nedb({
@@ -6,6 +7,8 @@ const db = new nedb({
   autoload: true,
 });
 const app = express();
+
+app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 

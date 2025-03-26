@@ -34,6 +34,12 @@
           <div class="col-sm-12 col-md-12 col-xs-12">
             <h2>Cursos Hcode</h2>
           </div>
+
+          <div class="col-sm-4 col-md-4 col-xs-12">
+            <button class="btn btn-danger" id="disable_effects">
+              Desabilitar animações
+            </button>
+          </div>
         </div>
 
         <div class="row courses_list">
@@ -119,6 +125,10 @@
       $(document).ready(function () {
         $(".btn_toggle_item").on("click", function () {
           $(this).prev(".course_item_inner").toggle(1000);
+        });
+
+        $("#disable_effects").on("click", function () {
+          $.fx.off = !$.fx.off;
         });
       });
     </script>

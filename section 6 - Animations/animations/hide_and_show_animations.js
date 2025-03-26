@@ -1,4 +1,4 @@
-//! Escondendo um elemento:
+//! Escondendo um elemento: .hide(), .show() & .toggle()
 // $(".courses_list div:first").hide(2000);
 
 // Exibindo um elemento:

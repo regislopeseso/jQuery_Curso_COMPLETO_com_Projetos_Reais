@@ -10,8 +10,8 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get("/books", (req, res) => {
-  res.json({
-    success: true,
+  db.find({}, (err, books) => {
+    res.json(books);
   });
 });
 

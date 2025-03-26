@@ -40,8 +40,12 @@
               Iniciar animação
             </button>
 
+            <button class="btn btn-warning" id="stop_effect">
+              Parar animações
+            </button>
+
             <button class="btn btn-danger" id="disable_effects">
-              Desabilitar animações
+              Desligar animações
             </button>
           </div>
         </div>
@@ -137,9 +141,12 @@
 
         $("#init_effect").on("click", function () {
           $(".logo")
-            .animate({
-              marginTop: "+=90px",
-            })
+            .animate(
+              {
+                marginTop: "+=90px",
+              },
+              2000
+            )
             .delay(500)
             .animate({
               marginLeft: "+=300px",
@@ -150,8 +157,11 @@
               });
               $(this).dequeue();
             })
-            .delay(1000)
-            .fadeOut(2000);
+            .delay(1000);
+        });
+
+        $("#stop_effect").on("click", function () {
+          $(".logo").finish();
         });
       });
     </script>

@@ -39,7 +39,7 @@
 
           $(divToAppend).append(divLoad);
 
-          $(this).append(divToAppend);
+          $(this).append(divToAppend).hide().fadeIn("slower");
           break;
 
         case "unload":

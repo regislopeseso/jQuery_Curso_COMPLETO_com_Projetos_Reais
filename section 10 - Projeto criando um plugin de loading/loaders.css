@@ -28,7 +28,10 @@
 }
 
 /*-------------------------*/
-
+.lds-ring {
+  /* change color here */
+  color: #e5e5e5;
+}
 .lds-ring,
 .lds-ring div {
   box-sizing: border-box;

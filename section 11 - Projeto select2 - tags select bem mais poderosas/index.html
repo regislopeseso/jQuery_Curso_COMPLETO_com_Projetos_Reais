@@ -34,12 +34,25 @@
         </div>
 
         <div class="row">
-          <div class="col-12">
+          <div class="col-6">
             <div class="form-group">
               <label for="">Selecione seu estado</label>
               <select
                 name=""
                 id="select-states"
+                class="form-control form-select"
+              >
+                <option value="">Selecione</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="form-group">
+              <label for="">Selecione sua cidade</label>
+              <select
+                name=""
+                id="select-cities"
                 class="form-control form-select"
               >
                 <option value="">Selecione</option>
@@ -54,34 +67,72 @@
     <script src="node_modules/select2/dist/js/select2.min.js"></script>
     <script>
       $(document).ready(function () {
+        function filterResults(dataToFilter, paramsToFilter) {
+          return [...dataToFilter].filter((item) => {
+            let regex = eval(`/${paramsToFilter.term}/gi`);
+            let result = item.nome.match(regex);
+
+            if (result) {
+              return true;
+            }
+          });
+        }
+
         $("#select-states").select2({
           ajax: {
             url: "https://servicodados.ibge.gov.br/api/v1/localidades/estados",
             processResults: (data, params) => {
-              let newData = [...data].filter((item) => {
-                let regex = eval(`/${params.term}/gi`);
-                let result = item.nome.match(regex);
+              let newData = filterResults(data, params);
 
-                if (result) {
-                  return true;
-                }
-              });
               return {
-                results: newData
-              }
+                results: newData,
+              };
             },
-            data: params => {
+            data: (params) => {
               return {
-                q: params.term
-              }
-            }
+                q: params.term,
+              };
+            },
           },
           templateResult: (data) => {
             return data.nome;
           },
-          templateSelection: data => {
-            return data.nome
-          }
+          templateSelection: (data) => {
+            return data.nome;
+          },
+        });
+
+        $("#select-cities").parent().hide();
+
+        $("#select-states").on("select2:select", (event) => {
+          let idState = event.params.data.id;
+
+          $("#select-cities").select2();
+          $("#select-cities").parent().show();
+
+          $("#select-cities").select2({
+            ajax: {
+              url: `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${idState}/distritos`,
+              processResults: (data, params) => {
+                data = filterResults(data, params);
+
+                return {
+                  results: data,
+                };
+              },
+              data: (params) => {
+                return {
+                  q: params,
+                };
+              },
+            },
+            templateResult: (data) => {
+              return data.nome;
+            },
+            templateSelection: (data) => {
+              return data.nome;
+            },
+          });
         });
       });
     </script>

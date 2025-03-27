@@ -13,11 +13,13 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
 
     <script>
-      $.fn.changeText = function () {
-        this.css("font-size", "50px");
+      (function ($) {
+        $.fn.changeText = function () {
+          this.css("font-size", "50px");
 
-        return this;
-      };
+          return this;
+        };
+      })(jQuery);
 
       $(() => {});
 

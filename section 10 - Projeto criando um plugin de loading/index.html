@@ -3,7 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Hcode Loader</title>
+    <link rel="stylesheet" href="loaders.css" />
   </head>
-  <body></body>
+  <body>
+    <div
+      id="loader"
+      style="
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.4);
+      "
+    >
+      <div
+        class="lds-dual-ring"
+        style="position: absolute; top: 50%; left: 50%"
+      ></div>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  </body>
 </html>

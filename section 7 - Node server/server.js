@@ -46,5 +46,3 @@ app.delete("/books/:id", (req, res) => {
 app.listen(3000, () => {
   console.log("Servidor executando com sucesso na porta 3000.");
 });
-
-//para interromper o servidor basta clicar no terminal e digitar ctrl+c

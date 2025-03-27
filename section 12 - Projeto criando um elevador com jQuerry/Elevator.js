@@ -1,6 +1,7 @@
 class Elevator {
   constructor() {
     this.$elevator = $(".elevator");
+    this.floorQtd = 3;
   }
 
   openDoor() {
@@ -22,5 +23,19 @@ class Elevator {
   isDoorOpen() {
     let door = this.$elevator.find(".door");
     return door.hasClass("open");
+  }
+
+  goToFloor(number) {
+    this.removeFloorClasses();
+
+    this.$elevator.addClass(`floor${number}`);
+
+    this.$elevator.data("floor", number);
+  }
+
+  removeFloorClasses() {
+    for (let i = 1; i <= this.floorQtd; i++) {
+      this.$elevator.removeClass(`floor${i}`);
+    }
   }
 }

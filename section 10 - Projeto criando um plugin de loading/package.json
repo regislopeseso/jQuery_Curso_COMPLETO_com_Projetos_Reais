@@ -1,0 +1,15 @@
+{
+  "name": "section-10---projeto-criando-um-plugin-de-loading",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
+}

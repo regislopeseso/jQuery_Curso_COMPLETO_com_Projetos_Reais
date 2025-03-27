@@ -4,24 +4,24 @@ class Elevator {
     this.floorQtd = 3;
     this.isMovement = false;
     this.queue = [];
-    this.initCamera();
+    //this.initCamera();
     this.initEvents();
   }
 
-  initCamera() {
-    navigator.mediaDevices
-      .getUserMedia({
-        video: true,
-      })
-      .then((stream) => {
-        let video = this.$elevator.find(".camera")[0];
+  // initCamera() {
+  //   navigator.mediaDevices
+  //     .getUserMedia({
+  //       video: true,
+  //     })
+  //     .then((stream) => {
+  //       let video = this.$elevator.find(".camera")[0];
 
-        video.srcObject = stream;
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  }
+  //       video.srcObject = stream;
+  //     })
+  //     .catch((err) => {
+  //       console.error(err);
+  //     });
+  // }
 
   initEvents() {
     $(".buttons .btn").on("click", (e) => {
